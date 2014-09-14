@@ -19,6 +19,7 @@ gem 'fuzzily'
 # gem 'omniauth-facebook'
 # gem 'omniauth-twitter'
 gem 'websocket-rails'
+gem 'will_paginate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'

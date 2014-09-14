@@ -6,5 +6,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get  'api/list/all', to: 'list#index'
+  get  'api/list/:id', to: 'list#show'
+  put  'api/list/:id', to: 'list#update'
+  post 'api/list/',    to: 'list#create'
+
   get '*path', to: 'application#index'
 end
