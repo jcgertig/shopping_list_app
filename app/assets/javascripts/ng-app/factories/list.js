@@ -19,7 +19,11 @@ angular.module('shoppingListApp').
       get: {
         method: 'GET'
       },
-      
+
+      delete: {
+        method: 'DELETE'
+      },
+
       getAllLists: {
         method: 'GET',
         params: {
