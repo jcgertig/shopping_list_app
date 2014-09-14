@@ -16,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Items" do
           ul do
-            Item.recent(5).map do |item|
+            Item.last(5).map do |item|
               li link_to(item.name, admin_item_path(item))
             end
           end
@@ -26,7 +26,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Location Price" do
           ul do
-            Locationprice.recent(5).map do |locationprice|
+            Locationprice.last(5).map do |locationprice|
               li link_to("#{locationprice.location.name} : $#{locationprice.price.value}", admin_locationprice_path(locationprice))
             end
           end

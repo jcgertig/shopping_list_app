@@ -14,7 +14,6 @@ gem 'devise'
 gem 'font-awesome-sass'
 gem 'fuzzily'
 # gem 'jquery-ui-rails'
-gem "meta_search" #Needed with activeadmin
 # gem 'mini_magick'
 # gem 'omniauth'
 # gem 'omniauth-facebook'
