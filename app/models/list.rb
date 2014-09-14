@@ -1,6 +1,6 @@
 class List < ActiveRecord::Base
-  has_many :listitems
+  has_many :listitems, dependent: :destroy
   has_many :items, through: :listitems
 
-  fuzzy_searchable :name
+  paginates_per 10
 end

@@ -1,3 +1,68 @@
-<div class="container" ng-init="init()">
+<script type="text/ng-template" id="createListModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Create List</h3>
+  </div>
+  <div class="modal-body">
+    <label for="list-name">List Name</label>
+    <input id="list-name" placeholder="Name">
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Create</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
 
+<script type="text/ng-template" id="editListModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Edit List</h3>
+  </div>
+  <div class="modal-body">
+    <label for="list-name">List Name</label>
+    <input id="list-name" placeholder="Name" ng-model='listName'>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Edit</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="deleteListModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Delete List?</h3>
+  </div>
+  <div class="modal-body">
+    Are you sure you want to delete this list?
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
+
+<div class="container" ng-init="init()">
+  <h2>Lists <i class="fa fa-plus" ng-click="createList()" style="cursor:pointer;"></i></h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Created</th>
+          <th>Updated</th>
+          <th>Items</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="list in lists">
+          <td><a href="/list/{{list.id}}">{{list.name}}</a></td>
+          <td>{{list.created}}</td>
+          <td>{{list.updated}}</td>
+          <td>{{list.items}}</td>
+          <td><i ng-click="editList(list.id, list.name)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
+          <td><i ng-click="deleteList(list.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

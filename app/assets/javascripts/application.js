@@ -14,12 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require pnotify
+//= require lodash
 //= require angular
 //= require angular-animate
+//= require angular-resource
 //= require angular-bootstrap
 //= require angular-ui-router
 //= require angular-rails-templates
 //= require_tree .
 //= require_tree ../templates
 //= require websocket_rails/main
-

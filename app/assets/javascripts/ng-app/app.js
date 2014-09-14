@@ -4,7 +4,8 @@ angular.module('shoppingListApp', [
     'ngAnimate',
     'ui.router',
     'ui.bootstrap',
-    'templates'
+    'templates',
+    'ngResource'
   ]).
   config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -19,7 +20,7 @@ angular.module('shoppingListApp', [
     }).
     state('list', {
       url: '/list/:id',
-      templateUrl: 'list/layout.html',
+      templateUrl: 'list.html',
       controller: 'ListCtrl'
     });
 

@@ -1,14 +1,14 @@
 /*jshint strict:false */
 angular.module('shoppingListApp').
   factory('List', function($resource){
-    return $resource('/api/list/:id/', {
-      id: '@_id'
+    return $resource('/api/list/:id.json', {
+      id: '@id'
     },
     {
       create: {
         method: 'POST',
         params: {
-          id: ''
+          id: 'create'
         }
       },
 
@@ -28,8 +28,7 @@ angular.module('shoppingListApp').
         method: 'GET',
         params: {
           id: 'all'
-        },
-        isArray: true
+        }
       }
     });
   });

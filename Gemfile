@@ -14,7 +14,7 @@ gem 'devise'
 gem 'font-awesome-sass'
 gem 'fuzzily'
 # gem 'jquery-ui-rails'
-gem 'kaminari'
+gem 'kaminari' #pagination
 # gem 'mini_magick'
 # gem 'omniauth'
 # gem 'omniauth-facebook'
