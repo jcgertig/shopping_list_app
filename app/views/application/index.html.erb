@@ -1,0 +1,5 @@
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+<div class="main-view-container" ui-view></div>
