@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-# gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'angular-rails-templates'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
