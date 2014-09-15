@@ -44,9 +44,9 @@ class LocationController < ApplicationController
 
   def search
     limit = params[:limit] ? params[:limit] : 10
-    @location = Location.find_by_fuzzy_name(params[:name], limit: limit)
+    @locations = Location.find_by_fuzzy_name(params[:name], limit: limit)
 
-    @message = "Found #{@users.count}"
+    @message = "Found #{@locations.count}"
   end
 
   private

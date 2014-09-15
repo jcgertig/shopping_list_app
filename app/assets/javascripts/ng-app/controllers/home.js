@@ -1,6 +1,6 @@
 /*jshint strict:false */
 angular.module('shoppingListApp').
-  controller('HomeCtrl', function ($scope, $http, $modal, $log, Notice, List, Location) {
+  controller('HomeCtrl', function ($scope, $modal, $log, Notice, List, Location) {
     $scope.lists = [];
     $scope.locations = [];
 

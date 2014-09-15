@@ -19,5 +19,19 @@ Rails.application.routes.draw do
   get    'api/location/:id',    to: 'location#show'
   put    'api/location/:id',    to: 'location#update'
 
+  get    'api/item/all',    to: 'item#index'
+  get    'api/item/search', to: 'item#search'
+  post   'api/item/create', to: 'item#create'
+  delete 'api/item/:id',    to: 'item#destroy'
+  get    'api/item/:id',    to: 'item#show'
+  put    'api/item/:id',    to: 'item#update'
+
+  get    'api/list/:list_id/item/all',    to: 'listitem#index'
+  get    'api/list/:list_id/item/search', to: 'listitem#search'
+  post   'api/list/:list_id/item/create', to: 'listitem#create'
+  delete 'api/list/:list_id/item/:id',    to: 'listitem#destroy'
+  get    'api/list/:list_id/item/:id',    to: 'listitem#show'
+  put    'api/list/:list_id/item/:id',    to: 'listitem#update'
+
   get '*path', to: 'application#index'
 end
