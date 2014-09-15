@@ -39,6 +39,71 @@
   </div>
 </script>
 
+<script type="text/ng-template" id="createLocationModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Create Location</h3>
+  </div>
+  <div class="modal-body">
+    <div class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="location-name" class="col-sm-3 control-label">Location Name</label>
+        <div class="col-sm-9">
+          <input id="location-name" class="form-control" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-address" class="col-sm-3 control-label">Location Address</label>
+        <div class="col-sm-9">
+          <textarea id="location-address" class="form-control" placeholder="Address"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Create</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="editLocationModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Edit Location</h3>
+  </div>
+  <div class="modal-body">
+    <div class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="location-name" class="col-sm-3 control-label">Location Name</label>
+        <div class="col-sm-9">
+          <input id="location-name" class="form-control" placeholder="Name" ng-model='locationName'>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-address" class="col-sm-3 control-label">Location Address</label>
+        <div class="col-sm-9">
+          <textarea id="location-address" class="form-control" placeholder="Address" ng-model='locationAddress'></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Edit</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="deleteLocationModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Delete Location?</h3>
+  </div>
+  <div class="modal-body">
+    Are you sure you want to delete this list?
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
+
 <div class="container" ng-init="init()">
   <h2>Lists <i class="fa fa-plus" ng-click="createList()" style="cursor:pointer;"></i></h2>
   <div class="table-responsive">
@@ -61,6 +126,34 @@
           <td>{{list.items}}</td>
           <td><i ng-click="editList(list.id, list.name)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
           <td><i ng-click="deleteList(list.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Locations <i class="fa fa-plus" ng-click="createLocation()" style="cursor:pointer;"></i></h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Created</th>
+          <th>Updated</th>
+          <th>Items</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="location in locations">
+          <td><a href="/location/{{location.id}}">{{location.name}}</a></td>
+          <td>{{location.address}}</td>
+          <td>{{location.created}}</td>
+          <td>{{location.updated}}</td>
+          <td>{{location.items}}</td>
+          <td><i ng-click="editLocation(location.id, location.name, location.address)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
+          <td><i ng-click="deleteLocation(location.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
         </tr>
       </tbody>
     </table>

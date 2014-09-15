@@ -4,4 +4,6 @@ class Item < ActiveRecord::Base
 
   has_many :listitems, dependent: :destroy
   has_many :lists, through: :listitems
+
+  fuzzily_searchable :name
 end

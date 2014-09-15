@@ -6,11 +6,18 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  delete 'api/list/:id',    to: 'list#destroy'
   get    'api/list/all',    to: 'list#index'
+  post   'api/list/create', to: 'list#create'
+  delete 'api/list/:id',    to: 'list#destroy'
   get    'api/list/:id',    to: 'list#show'
   put    'api/list/:id',    to: 'list#update'
-  post   'api/list/create', to: 'list#create'
+
+  get    'api/location/all',    to: 'location#index'
+  get    'api/location/search', to: 'location#search'
+  post   'api/location/create', to: 'location#create'
+  delete 'api/location/:id',    to: 'location#destroy'
+  get    'api/location/:id',    to: 'location#show'
+  put    'api/location/:id',    to: 'location#update'
 
   get '*path', to: 'application#index'
 end
