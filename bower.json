@@ -1,4 +1,16 @@
 {
+  "name": "better shopping list app",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-animate": "latest",
+    "angular-resource": "latest",
+    "angular-sanitize": "latest",
+    "angular-bootstrap": "latest",
+    "lodash": "latest",
+    "pnotify": "latest"
+  },
   "lib": {
     "name": "bower-rails generated lib assets",
     "dependencies": {
