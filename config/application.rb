@@ -8,8 +8,10 @@ Bundler.require(*Rails.groups)
 
 module ShoppingListApp
   class Application < Rails::Application
+    # include Bower components in compiled assets
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+
     # We don't want the default of everything that isn't js or css, because it pulls too many things in
-config.assets.precompile.shift
     config.assets.precompile.shift
 
     # Explicitly register the extensions we are interested in compiling
