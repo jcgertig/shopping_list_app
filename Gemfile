@@ -15,6 +15,7 @@ gem 'font-awesome-sass'
 gem 'fuzzily'
 # gem 'jquery-ui-rails'
 gem 'kaminari' #pagination
+gem 'ngannotate-rails'
 # gem 'mini_magick'
 # gem 'omniauth'
 # gem 'omniauth-facebook'
