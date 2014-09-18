@@ -79,7 +79,6 @@ angular.module('shoppingListApp').
 
     $scope.getItems = function(val) {
       return Item.search({name: val}).$promise.then(function(res){
-        $log.info(res.items);
         return res.items;
       });
     };

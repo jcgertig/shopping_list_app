@@ -12,8 +12,8 @@ class ListitemController < ApplicationController
 
   def update
     @item = Listitem.find(params[:id])
-    @item.item.update!({name: params[:name]})
     if @item
+    @item.item.update!({name: params[:name]})
       if @item.update!(item_params)
         @item = Listitem.find(params[:id])
         @message = "Updated item succesfully!"

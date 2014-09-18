@@ -22,6 +22,11 @@ angular.module('shoppingListApp', [
       url: '/list/:id',
       templateUrl: 'list.html',
       controller: 'ListCtrl'
+    }).
+    state('location', {
+      url: '/location/:id',
+      templateUrl: 'location.html',
+      controller: 'LocationCtrl'
     });
 
     // default fall back route

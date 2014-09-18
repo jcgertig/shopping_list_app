@@ -7,8 +7,7 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Quantity</th>
-            <th>Gotten</th>
+            <th>Price</th>
             <th>Edit</th>
             <th>Remove</th>
           </tr>
@@ -16,8 +15,7 @@
         <tbody>
           <tr ng-repeat="item in items">
             <td>{{item.item.name}}</td>
-            <td><input class="quantity" type="number" ng-model="item.quantity" ng-click="updateQuantity($event, item)"></td>
-            <td><input class="gotten" type="checkbox" ng-checked="item.gotten" ng-click="updateGotten($event, item)"></td>
+            <td>{{item.price}}</td>
             <td><i ng-click="editItem(item)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
             <td><i ng-click="deleteItem(item)" class="fa fa-trash" style="cursor:pointer;"></i></td>
           </tr>
@@ -25,7 +23,6 @@
       </table>
     </div>
   </div>
-
 
   <div id="itemModal" class="modal fade">
     <div class="modal-dialog">
@@ -43,15 +40,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="quantity" class="col-sm-3 control-label">Quantity</label>
+              <label for="price" class="col-sm-3 control-label">Price</label>
               <div class="col-sm-9">
-                <input id="quantity" type="number" class="form-control" placeholder="Quantity" ng-model='selectedItem.quantity'>
-              </div>
-            </div>
-            <div class="form-group" ng-show="modalState === 'Edit'">
-              <label for="gotten" class="col-sm-3 control-label">Gotten</label>
-              <div class="col-sm-9">
-                <input type="checkbox" id="gotten" ng-checked="selectedItem.gotten" ng-click="toggleGotten()">
+                <input id="price" class="form-control" placeholder="Price" ng-model='selectedItem.price'>
               </div>
             </div>
           </div>
