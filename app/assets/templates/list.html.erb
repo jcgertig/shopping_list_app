@@ -9,17 +9,15 @@
             <th>Name</th>
             <th>Quantity</th>
             <th>Gotten</th>
-            <th>Edit</th>
-            <th>Remove</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="item in items">
-            <td>{{item.item.name}}</td>
+            <td ng-click="editItem(item)" >{{item.item.name}}</td>
             <td><input class="quantity" type="number" ng-model="item.quantity" ng-click="updateQuantity($event, item)"></td>
             <td><input class="gotten" type="checkbox" ng-checked="item.gotten" ng-click="updateGotten($event, item)"></td>
-            <td><i ng-click="editItem(item)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
-            <td><i ng-click="deleteItem(item)" class="fa fa-trash" style="cursor:pointer;"></i></td>
+            <td><i ng-click="editItem(item)" class="fa fa-pencil" style="cursor:pointer;"></i> <i ng-click="deleteItem(item)" class="fa fa-trash" style="cursor:pointer;"></i></td>
           </tr>
         </tbody>
       </table>

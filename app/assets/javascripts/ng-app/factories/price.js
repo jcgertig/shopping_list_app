@@ -1,7 +1,8 @@
 /*jshint strict:false */
 angular.module('shoppingListApp').
   factory('Price', function($resource){
-    return $resource('/api/location/:locationId/item/:id.json', {
+    return $resource('/api/location/:locationId/item/:id.json',
+    {
       locationId: '@locationId', id: '@id'
     },
     {
@@ -24,7 +25,7 @@ angular.module('shoppingListApp').
         method: 'DELETE'
       },
 
-      getAllPrices: {
+      getAll: {
         method: 'GET',
         params: {
           id: 'all'

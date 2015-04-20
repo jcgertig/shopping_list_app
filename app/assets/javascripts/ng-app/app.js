@@ -1,5 +1,4 @@
 /*jshint strict:false */
-
 angular.module('shoppingListApp', [
     'ngAnimate',
     'ui.router',

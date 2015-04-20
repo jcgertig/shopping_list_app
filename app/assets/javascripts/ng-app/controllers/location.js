@@ -59,7 +59,7 @@ angular.module('shoppingListApp').
     };
 
     $scope.getLocationItems = function() {
-      Price.getAllPrices({locationId: $scope.locationId}, function(res) {
+      Price.getAll({locationId: $scope.locationId}, function(res) {
         $scope.items = res.prices;
       });
     };

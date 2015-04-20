@@ -68,7 +68,7 @@ angular.module('shoppingListApp').
     };
 
     $scope.getAllLists = function() {
-      List.getAllLists(function(res) {
+      List.getAll(function(res) {
         $scope.lists = res.lists;
       });
     };
@@ -146,7 +146,7 @@ angular.module('shoppingListApp').
     };
 
     $scope.getAllLocations = function() {
-      Location.getAllLocations(function(res) {
+      Location.getAll(function(res) {
         $scope.locations = res.locations;
       });
     };

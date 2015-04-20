@@ -24,7 +24,7 @@ angular.module('shoppingListApp').
         method: 'DELETE'
       },
 
-      getAllLists: {
+      getAll: {
         method: 'GET',
         params: {
           id: 'all'

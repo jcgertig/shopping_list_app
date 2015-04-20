@@ -84,7 +84,7 @@ angular.module('shoppingListApp').
     };
 
     $scope.getListItems = function() {
-      ListItem.getAllItems({listId: $scope.listId}, function(res){
+      ListItem.getAll({listId: $scope.listId}, function(res){
         $scope.items = res.items;
       });
     };

@@ -114,8 +114,7 @@
           <th>Created</th>
           <th>Updated</th>
           <th>Items</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -124,8 +123,7 @@
           <td>{{list.created}}</td>
           <td>{{list.updated}}</td>
           <td>{{list.items}}</td>
-          <td><i ng-click="editList(list.id, list.name)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
-          <td><i ng-click="deleteList(list.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
+          <td><i ng-click="editList(list.id, list.name)" class="fa fa-pencil" style="cursor:pointer;"></i> <i ng-click="deleteList(list.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
         </tr>
       </tbody>
     </table>
@@ -141,8 +139,7 @@
           <th>Created</th>
           <th>Updated</th>
           <th>Items</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -152,8 +149,7 @@
           <td>{{location.created}}</td>
           <td>{{location.updated}}</td>
           <td>{{location.items}}</td>
-          <td><i ng-click="editLocation(location.id, location.name, location.address)" class="fa fa-pencil" style="cursor:pointer;"></i></td>
-          <td><i ng-click="deleteLocation(location.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
+          <td><i ng-click="editLocation(location.id, location.name, location.address)" class="fa fa-pencil" style="cursor:pointer;"></i> <i ng-click="deleteLocation(location.id)" class="fa fa-trash" style="cursor:pointer;"></i></td>
         </tr>
       </tbody>
     </table>
